@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+
+}
+android {
+    compileSdk 33
+
+    defaultConfig {
+        namespace "com.example.android.whowroteit"
+        applicationId "com.example.android.whowroteit"
+        minSdk 15
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:24.0.0'
+
+}
